@@ -1,0 +1,119 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>UPE Puzzle</title>
+  <link rel="icon" href="upe.png">
+  <meta name="author" content="Augustus">
+  <meta name="shift" content="ten">
+
+
+</head>
+
+<body>
+	<h3>Not a Salad</h3>
+	<div style="width:260px; margin-top:45px;height:250px;position: fixed;top:0px;left:0px;z-index:1"  onmouseover="recipeHint()" onmouseout="recipeHintLeave()" >
+	</div>
+	<div>
+	
+	<ul  id="ingredientList">
+		<li>1 clove garlic</li>
+		<li>1 tablespoon lemon juice</li>
+		<li>1 tablespoon worcestershire sauce</li>
+		<li>10 small capers</li>
+		<li>1/4 cup parmesan</li>
+		<li>1 egg room temperature</li>
+		<li>2 anchovy filets</li>
+		<li>1/2 cup light olive oil or canola oil</li>
+		<li>fresh black pepper</li>
+		<li>8 cups romaine lettuce</li>
+		<li>1 cup croutos</li>
+		<li>1/3 cup parmesan cheese</li>
+		<li>1/2 tablespoon dijon mustard</li>
+	</ul>
+	
+	</div>
+	<img src="salad.jpg">
+	<!--
+		Find the message you will not
+		Visit three sites I have got
+		One is Sergey's tried and true
+		At the bottom you must view
+		Second letter second word
+		Wonder woman have you heard
+		She and Hippolyta I set forth
+		At the bottom it's the fourth
+		Its first letter is the second
+		Third and last you are stunned
+		Go to where your time flies
+		Endless videos I surmise
+		Of your choices it's the first
+		The final letter is the third
+		These three letters make the word
+		Visit there and find me who's unheard
+	 --> 
+
+<script>
+//The scripts are not part of the game, don't waste your time analyzing it
+function recipeHint() {
+	console.log("hint")
+	const ingredients = ["1 clove garlIc",
+		"1 tablespooN lemon juice",
+		"1 tableSpoon worcestershire sauce",
+		"10 small caPErs",
+		"1/4 Cup parmesan",
+		"1 egg room TEmperature",
+		"2 anchovy fiLEts",
+		"1/2 cup light olive oil or canola oil",
+		"fresh black pepper",
+		"8 cups roMainE lettuce",
+		"1 cup croutos",
+		"1/3 cup parmesaN cheese",
+		"1/2 Tablespoon dijon mustard"]
+	var item = document.getElementById("ingredientList");
+	while (item.firstChild) {
+   		 item.removeChild(item.firstChild);
+	}
+	for (i = 0; i < ingredients.length; i++){
+		var elmnt = document.createElement("li");
+		var textnode = document.createTextNode(ingredients[i]);
+		elmnt.appendChild(textnode)
+		item.appendChild(elmnt)
+	}
+}
+function recipeHintLeave() {
+	console.log("LEAVE")
+	const ingredients = ["1 clove garlic",
+		"1 tablespoon lemon juice",
+		"1 tablespoon worcestershire sauce",
+		"10 small capers",
+		"1/4 cup parmesan",
+		"1 egg room temperature",
+		"2 anchovy filets",
+		"1/2 cup light olive oil or canola oil",
+		"fresh black pepper",
+		"8 cups romaine lettuce",
+		"1 cup croutos",
+		"1/3 cup parmesan cheese",
+		"1/2 tablespoon dijon mustard"]
+	var item = document.getElementById("ingredientList");
+	while (item.firstChild) {
+   		 item.removeChild(item.firstChild);
+	}
+	for (i = 0; i < ingredients.length; i++){
+		item.emp
+		console.log("replacing "+i)
+		var elmnt = document.createElement("li");
+		var textnode = document.createTextNode(ingredients[i]);
+		console.log(textnode)
+		elmnt.appendChild(textnode)
+		item.appendChild(elmnt)
+	}
+}
+</script>
+
+</body>
+</html>
+
