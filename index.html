@@ -58,7 +58,6 @@
 <script>
 //The scripts are not part of the game, don't waste your time analyzing it
 function recipeHint() {
-	console.log("hint")
 	const ingredients = ["1 clove garlIc",
 		"1 tablespooN lemon juice",
 		"1 tableSpoon worcestershire sauce",
@@ -84,7 +83,6 @@ function recipeHint() {
 	}
 }
 function recipeHintLeave() {
-	console.log("LEAVE")
 	const ingredients = ["1 clove garlic",
 		"1 tablespoon lemon juice",
 		"1 tablespoon worcestershire sauce",
@@ -104,10 +102,8 @@ function recipeHintLeave() {
 	}
 	for (i = 0; i < ingredients.length; i++){
 		item.emp
-		console.log("replacing "+i)
 		var elmnt = document.createElement("li");
 		var textnode = document.createTextNode(ingredients[i]);
-		console.log(textnode)
 		elmnt.appendChild(textnode)
 		item.appendChild(elmnt)
 	}
